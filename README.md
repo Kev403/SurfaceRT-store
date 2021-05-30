@@ -12,3 +12,7 @@ Wait for a bit and your Microsoft Store should be installed with required files.
 
 WHEN IN STORE PLEASE GO TO SETTINGS AND DISABLE AUTOMATIC UPDATES!!!
 IF IGNORED IT'LL BREAK DOWNLOADS
+
+NOTE!
+Some users have reported errors with co-existing dependencies, if that's the case try to
+manually sideload MS Store from the appx package if AppInstaller is in place.
