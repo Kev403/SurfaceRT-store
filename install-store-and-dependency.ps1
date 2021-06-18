@@ -43,11 +43,4 @@ Write-Host "=========================== Discord: https://discord.gg/tAxvvVC"
 Write-Host "
 
 "
-Write-Host "=========================== Any red errors can mostly be ignored, either package is already installed"
-Write-Host "=========================== or you have a greater version. If store isn't there run second script"
-Write-Host "
-
-
-"
-
 Read-Host -Prompt "=========================== Press enter to continue"
