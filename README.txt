@@ -4,11 +4,11 @@ To install anything go to Settings > Security > for developers and enable develo
 
 Next open PowerShell as admin and run this command: Set-ExecutionPolicy Unrestricted.
 
-Finally right click on the run-me-in-powershell.ps1 and run in PowerShell, alternatively
-drag it on an open PowerShell window and run by pressing enter.
-(For this you must navigate to appropriate location first)
+^^^ These can be ignored unless ExecutionPolicy reports as restricted!!!
+Running the scripts asks you to input letters, press A and enter
 
-Wait for a bit and your Microsoft Store should be installed with required files.
+Finally right click on the install-store-and-dependency.ps1 and run in PowerShell, alternatively
+drag it on an open PowerShell window and run by pressing enter.
 
 WHEN IN STORE PLEASE GO TO SETTINGS AND DISABLE AUTOMATIC UPDATES!!!
 IF IGNORED IT'LL BREAK DOWNLOADS
