@@ -1,4 +1,89 @@
+Write-Host "
+=========================== You've opened...
+                                                                                                                    
+  ______                ___                      ______ _______ 
+ / _____)              / __)                    (_____ (_______)
+( (____  _   _  ____ _| |__ _____  ____ _____    _____) )  _    
+ \____ \| | | |/ ___|_   __|____ |/ ___) ___ |  |  __  /  | |   
+ _____) ) |_| | |     | |  / ___ ( (___| ____|  | |  \ \  | |   
+(______/|____/|_|     |_|  \_____|\____)_____)  |_|   |_| |_|   
+                                                                
+  ______                          _                        _ _  
+ / _____) _                      (_)             _        | | | 
+( (____ _| |_ ___   ____ _____    _ ____   ___ _| |_ _____| | | 
+ \____ (_   _) _ \ / ___) ___ |  | |  _ \ /___|_   _|____ | | | 
+ _____) )| || |_| | |   | ____|  | | | | |___ | | |_/ ___ | | | 
+(______/  \__)___/|_|   |_____)  |_|_| |_(___/   \__)_____|\_)_)
+                                                                
+                                                   
+=========================== Store installation script written by LeYuuki
+=========================== Version 1.0.0" 
 
+Start-Sleep -s 3
+Read-Host -Prompt "=========================== Press enter to continue"
+
+Write-Host "`r$frame" -NoNewline
+[Console]::CursorVisible = $false
+
+$animation = @"
+ _                 _ _             
+| |               | (_)            
+| | ___  _____  __| |_ ____   ____ 
+| |/ _ \(____ |/ _  | |  _ \ / _  |
+| | |_| / ___ ( (_| | | | | ( (_| |
+ \_)___/\_____|\____|_|_| |_|\___ |
+                            (_____|
+#
+ _                 _ _                  
+| |               | (_)                 
+| | ___  _____  __| |_ ____   ____      
+| |/ _ \(____ |/ _  | |  _ \ / _  |     
+| | |_| / ___ ( (_| | | | | ( (_| |   _ 
+ \_)___/\_____|\____|_|_| |_|\___ |  (_)
+                            (_____|    
+#
+ _                 _ _                       
+| |               | (_)                      
+| | ___  _____  __| |_ ____   ____           
+| |/ _ \(____ |/ _  | |  _ \ / _  |          
+| | |_| / ___ ( (_| | | | | ( (_| |   _    _ 
+ \_)___/\_____|\____|_|_| |_|\___ |  (_)  (_)
+                            (_____|           
+#
+ _                 _ _                            
+| |               | (_)                           
+| | ___  _____  __| |_ ____   ____                
+| |/ _ \(____ |/ _  | |  _ \ / _  |               
+| | |_| / ___ ( (_| | | | | ( (_| |   _    _    _ 
+ \_)___/\_____|\____|_|_| |_|\___ |  (_)  (_)  (_)
+                            (_____|                                                                     
+"@
+
+$frames = $animation.Split("#").Trim()
+
+$animationLoopNumber = 5 # number of times to loop animation
+
+$animationSpeed = 250 # time in milliseconds to show each frame
+
+$i = 0
+
+do {
+
+    foreach ($frame in $frames) {
+
+        Clear-Host
+        
+        Write-Output "$frame`n`n`n"
+    
+        Start-Sleep -Milliseconds $animationSpeed
+    }
+
+    $i++
+    
+} until ($i -eq $animationLoopNumber)
+
+Write-Host "=========================== Preparations complete"
+Start-Sleep -s 2
 Write-Host "=========================== Installing NET Framework" 
 
 	Add-AppxPackage $PSScriptRoot\files\Microsoft.NET.Native.Framework.1.6_1.6.27413.0.Appx
@@ -43,4 +128,5 @@ Write-Host "=========================== Discord: https://discord.gg/tAxvvVC"
 Write-Host "
 
 "
-Read-Host -Prompt "=========================== Press enter to continue"
+	Start-Sleep -s 3
+Read-Host -Prompt "=========================== Press enter to exit"
